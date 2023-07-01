@@ -15,8 +15,9 @@ class RomanToInt {
 
         int ans = 0;
         int n = s.length();
+        int num = 0;
         for (int i = 0; i < n; i++) {
-            int num = map.get(s.charAt(i));
+            num = map.get(s.charAt(i));
             if (i < n - 1 && num < map.get(s.charAt(i + 1))) {
                 ans -= num;
             } else {
