@@ -14,11 +14,10 @@ class RomanToInt {
         map.put('M', 1000);
 
         int ans = 0;
-        int n = s.length();
         int num = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < s.length(); i++) {
             num = map.get(s.charAt(i));
-            if (i < n - 1 && num < map.get(s.charAt(i + 1))) {
+            if (i < s.length() - 1 && num < map.get(s.charAt(i + 1))) {
                 ans -= num;
             } else {
                 ans += num;
